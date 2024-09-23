@@ -11,7 +11,44 @@ body {
     margin: 0; /* ยกเลิก margin */
     
 }
- 
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-size: 20px;
+    color: #00796b;
+}
+
+.loading-logo-container {
+    position: relative;
+}
+
+.loading-logo-background {
+    width: 100px; /* ขนาดของโลโก้พื้นหลัง */
+    animation: spin 2s linear infinite; /* หมุนโลโก้พื้นหลัง */
+}
+
+.loading-logo-foreground {
+    width: 100px; /* ขนาดของโลโก้ด้านหน้า */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
 .header {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), /* Gradient ด้านบน */

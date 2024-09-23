@@ -13,7 +13,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-
+ 
+    <div class="loading" id="loading" style="display:none;">
+        <div class="loading-logo-container">
+            <img src="logo.png" alt="Loading..." class="loading-logo-background">
+            <img src="logo.png" alt="Loading..." class="loading-logo-foreground">
+        </div>
+        <p>กำลังโหลด...</p>
+    </div>
+    
+    
     <!-- Header Section -->
     <header class="header">
         <br>
@@ -27,14 +36,14 @@
         </div>
         
         <div class="action-buttons">
-            <a href="#" class="btn sell">
+            <div class="btn sell" onclick="sellWaste(event)">
                 <i class="fas fa-trash-alt"></i>
                 <span>ขายขยะ</span>
-            </a>
-            <a href="#" class="btn donate">
+            </div>
+            <div class="btn donate" onclick="donateWaste(event)">
                 <i class="fas fa-hand-holding-heart"></i>
                 <span>ซื้อขยะ</span>
-            </a>
+            </div>
         </div>
         
     </header>
