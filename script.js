@@ -1,3 +1,9 @@
+// ปิดโมเดลเมื่อคลิกนอกโมเดล
+window.onclick = function(event) {
+    if (event.target == document.getElementById('sellModal')) {
+        document.getElementById('sellModal').style.display = 'none';
+    }
+}
 window.addEventListener('scroll', function() {
     const profile = document.querySelector('.profile');
     if (window.scrollY > 50) {
@@ -21,11 +27,17 @@ function sellWaste(event) {
     // จำลองการเรียก Ajax
     setTimeout(() => {
         // ซ่อน loading หลังจากโหลดเสร็จ
+        document.getElementById('sellModal').style.display = 'block';
         hideLoading();
-        alert('ขายขยะ'); // แทนที่ด้วยการเรียก API ของคุณ
+         
     }, 2000); // หน่วงเวลา 2 วินาที
-}
 
+    
+}
+// ปิดโมเดลเมื่อกดปุ่มปิด
+document.getElementById('closeModal').onclick = function() {
+    document.getElementById('sellModal').style.display = 'none';
+}
 function donateWaste(event) {
     event.preventDefault();
     showLoading();
