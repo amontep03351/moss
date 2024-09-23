@@ -48,3 +48,7 @@ function donateWaste(event) {
         alert('ซื้อขยะ'); // แทนที่ด้วยการเรียก API ของคุณ
     }, 2000); // หน่วงเวลา 2 วินาที
 }
+
+function closeModal(){
+    document.getElementById('sellModal').style.display = 'none';
+}
