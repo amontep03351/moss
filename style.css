@@ -209,8 +209,8 @@ body {
     background-color: white;
     border-radius: 10px;
     margin: 5px;
-    flex: 1; /* ทำให้ส่วนนี้ขยายเต็มที่ */
-    overflow-y: auto; /* ทำให้มี scrollbar ในแนวดิ่ง */
+   -- flex: 1; /* ทำให้ส่วนนี้ขยายเต็มที่ */
+    --overflow-y: auto; /* ทำให้มี scrollbar ในแนวดิ่ง */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
