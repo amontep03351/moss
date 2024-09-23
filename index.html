@@ -93,19 +93,50 @@
             <span>บัญชี</span>
         </div>
     </footer>
-    <!-- โมเดลสำหรับขายขยะ -->  
+    <!-- โมเดลสำหรับขายขยะ -->    
     <div class="modal" id="sellModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>ขายขยะ</h2>
-                 
+                <h2>🌍 ร่วมกันรักษ์โลก!</h2>
+                <button class="close" onclick="closeModal()">&times;</button>
             </div>
             <div class="modal-body">
-                
-                 
+                <p>กรุณากรอกข้อมูลขยะที่คุณต้องการขาย:</p>
+                <form id="sellForm">
+                    <label for="productType">เลือกประเภทสินค้า:</label>
+                    <select id="productType" required>
+                        <option value="" disabled selected>เลือก...</option>
+                        <option value="plastic">พลาสติก</option>
+                        <option value="paper">กระดาษ</option>
+                        <option value="metal">โลหะ</option>
+                        <option value="glass">แก้ว</option>
+                    </select>
+
+                    <label for="weight">น้ำหนักรวม (กิโลกรัม):</label>
+                    <input type="number" id="weight" placeholder="น้ำหนัก (kg)" required />
+
+                    <label for="quantity">จำนวนชิ้น (ประมาณ):</label>
+                    <input type="number" id="quantity" placeholder="จำนวนชิ้น" required />
+
+                    <label for="imageUpload">แนบรูปภาพ:</label> 
+                    <div class="file-upload">
+                        <label for="file-upload" class="custom-file-upload">
+                            <i class="fas fa-upload"></i> เลือกรูปภาพ
+                        </label>
+                        <input type="file" id="file-upload" accept="image/*" />
+                    </div>
+                    
+                    <p>ขั้นตอนการกรอกข้อมูล:</p>
+                    <ol>
+                        <li>เลือกประเภทสินค้า</li>
+                        <li>กรอกน้ำหนักและจำนวนชิ้น</li>
+                        <li>แนบรูปภาพเพื่อให้ผู้ซื้อเห็นชัดเจน</li>
+                    </ol>
+                </form>
             </div>
             <div class="modal-footer">
-                
+                <button class="btnm confirm">ยืนยันการขาย</button>
+                <button class="btnm cancel" onclick="closeModal()">ยกเลิก</button>
             </div>
         </div>
     </div>
