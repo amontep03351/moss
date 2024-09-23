@@ -1,0 +1,239 @@
+body {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column; /* ทำให้มีแนวตั้ง */
+    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    margin: 0; /* ยกเลิก margin */
+    
+}
+ 
+.header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), /* Gradient ด้านบน */
+        url('header.png'); /* เปลี่ยนเป็น URL ของภาพพื้นหลัง */
+    background-size: cover; /* ขยายภาพให้เต็มพื้นที่ */
+    background-position: center; /* จัดกลางภาพ */
+    padding: 40px; /* เพิ่ม padding */
+    color: white; /* สีตัวอักษรขาว */
+    text-align: center; /* จัดกลางข้อความ */
+    position: relative; /* ตำแหน่งสัมพัทธ์ */
+    border-bottom: 5px solid #ffcc00; /* เส้นขอบล่างสีทอง */
+}
+
+.header h2 {
+    font-size: 3rem; /* ขนาดตัวอักษรใหญ่ขึ้น */
+    font-weight: 700; /* ตัวหนา */
+    color: #ffffff; /* สีตัวอักษรขาว */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* เงาให้ตัวอักษร */
+    margin: 0; /* ยกเลิก margin */
+    padding: 10px 0; /* เพิ่ม padding แนวตั้ง */
+    transition: transform 0.3s, color 0.3s; /* เพิ่มเอฟเฟกต์เมื่อ hover */
+}
+
+.header h2:hover {
+    transform: scale(1.1); /* ขยายตัวอักษรเมื่อ hover */
+    color: #ffcc00; /* เปลี่ยนสีตัวอักษรเมื่อ hover */
+}
+
+.header p {
+    font-size: 1.2rem; /* ขนาดตัวอักษรสำหรับข้อความรอง */
+    margin-top: 10px; /* เพิ่ม margin ด้านบน */
+    color: rgba(255, 255, 255, 0.8); /* สีขาวโปร่ง */
+}
+
+
+.profile {
+    position: fixed; /* ทำให้โปรไฟล์อยู่ที่ตำแหน่งคงที่ */
+    top: 20px; /* ระยะห่างจากด้านบน */
+    right: 20px; /* ระยะห่างจากด้านขวา */
+    z-index: 1000; /* ทำให้โปรไฟล์อยู่เหนือเนื้อหาอื่น */
+    transition: transform 0.3s; /* เพิ่มเอฟเฟกต์เมื่อเปลี่ยนแปลง */
+}
+
+.profile-img {
+    width: 50px; /* ขนาดเริ่มต้น */
+    height: 50px; /* ขนาดเริ่มต้น */
+    border-radius: 50%; /* ทำให้รูปเป็นวงกลม */
+    border: 2px solid #fff; /* ขอบสีขาว */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* เงาให้ดูเด่น */
+}
+
+.profile.shrink .profile-img {
+    width: 30px; /* ขนาดเมื่อเลื่อน */
+    height: 30px; /* ขนาดเมื่อเลื่อน */
+}
+
+
+
+.user-info {
+    font-weight: 200;
+    background-color: #383838;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px auto;
+    position: relative; /* ใช้สำหรับการจัดตำแหน่ง */
+    height: 75px; /* กำหนดความสูง */
+}
+
+.user-name {
+    position: absolute;
+    top: 10px;
+    left: 15px; /* ชิดซ้าย */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-code {
+    position: absolute;
+    top: 10px;
+    right: 15px; /* ชิดขวา */
+}
+
+.user-balance {
+    position: absolute;
+    bottom: 10px;
+    right: 15px; /* ชิดขวา */
+}
+
+
+.user-info p {
+    margin: 0px 0;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: #4db6ac;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 25px; /* มุมกลมมากขึ้น */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงา */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.btn i {
+    font-size: 24px; /* ขนาดไอคอน */
+    margin-right: 10px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.btn:hover {
+    transform: translateY(-5px); /* เคลื่อนที่ขึ้นเมื่อ hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* เงาเข้มขึ้นเมื่อ hover */
+}
+
+.btn.sell {
+    background-color: #fd793b; /* สีสำหรับขายขยะ */
+}
+
+.btn.donate {
+    background-color: #da1deb; /* สีสำหรับซื้อขยะ */
+}
+.banner-slider {
+    position: relative;
+    overflow: hidden; /* ซ่อนภาพที่อยู่นอกเหนือ */
+    height: 200px; /* ความสูงของแบนเนอร์ */
+    margin-bottom: 20px; /* ระยะห่างจากหัวข้อ */
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ครอบภาพให้เต็มพื้นที่ */
+    position: absolute;
+    animation: slide 15s infinite; /* เพิ่มแอนิเมชัน */
+}
+
+@keyframes slide {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+
+/* Content Section */
+.content {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin:  5px; 
+    text-align: center;
+    flex: 1; /* ทำให้ส่วนนี้ขยายเต็มที่ */
+    overflow-y: auto; /* ทำให้มี scrollbar ในแนวดิ่ง */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+ 
+.content h3 {
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    gap: 20px; /* ระยะห่างระหว่าง div */
+    margin:  0px;
+}
+
+.content-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* เงา */
+    padding: 15px;
+    text-align: left; /* จัดกลางข้อความ */
+}
+
+.content-thumbnail {
+    width: 100%; /* ขนาดกว้าง */
+    height: 100px; /* ขนาดสูง */
+    object-fit: cover; /* ให้รูปภาพถูกครอบให้เต็มพื้นที่ */
+    border-radius: 5px; /* มุมกลม */
+    margin-bottom: 0px; /* ระยะห่างระหว่างรูปกับข้อความ */
+}
+
+
+.content-container h4 {
+    margin: 10px 0; /* ระยะห่างระหว่างหัวข้อกับเนื้อหา */
+    color: #00796b; /* สีหัวข้อ */
+}
+
+.footer {
+    background-color: #1c251c;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.footer-btn {
+    font-weight: 300;
+    display: flex;
+    flex-direction: column; /* จัดเรียงแนวตั้ง */
+    align-items: center; /* จัดกลาง */
+    color: #ffffff; /* สีไอคอนและข้อความ */
+    text-decoration: none; /* ไม่ให้มีเส้นใต้ */
+}
+
+.footer-btn i {
+    font-size: 24px; /* ขนาดไอคอน */
+    margin-bottom: 5px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+.footer-btn:hover {
+    color: #004d40; /* เปลี่ยนสีเมื่อ hover */
+}
