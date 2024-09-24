@@ -80,6 +80,6 @@ function moveSlide(direction) {
 }
 
 // Automatically move to the next slide every 5 seconds (optional)
-setInterval(() => {
-    moveSlide(1);
-}, 5000);
+// setInterval(() => {
+//     moveSlide(1);
+// }, 5000);
