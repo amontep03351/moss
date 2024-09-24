@@ -54,30 +54,32 @@ function closeModal(){
 }
 let currentSlide = 0;
 
-function moveSlide(direction) {
+function showSlide(index) {
     const slides = document.querySelectorAll('.content-section');
     const totalSlides = slides.length;
+    
+    if (index >= totalSlides) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = totalSlides - 1;
+    } else {
+        currentSlide = index;
+    }
 
-    // ซ่อนสไลด์ปัจจุบัน
-    slides[currentSlide].classList.remove('active');
-
-    // คำนวณสไลด์ถัดไป
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-
-    // แสดงสไลด์ถัดไป
-    slides[currentSlide].classList.add('active');
-
-    // เปลี่ยนตำแหน่งของ carousel-inner
     const carouselInner = document.querySelector('.carousel-inner');
-    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-    // เพิ่มเอฟเฟกต์การเลื่อนของ overlay
-    const overlay = document.querySelector('.overlay');
-    overlay.style.transform = 'translateY(-10px)'; // เลื่อนขึ้นเล็กน้อย
-    setTimeout(() => {
-        overlay.style.transform = 'translateY(0)'; // เลื่อนกลับลง
-    }, 500);
+    carouselInner.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+    });
+    slides[currentSlide].classList.add('active');
 }
 
-// ใช้ setInterval เพื่อเลื่อนอัตโนมัติ
-setInterval(() => moveSlide(1), 5000); // เลื่อนทุก 5 วินาที
+function moveSlide(direction) {
+    showSlide(currentSlide + direction);
+}
+
+// Automatically move to the next slide every 5 seconds (optional)
+setInterval(() => {
+    moveSlide(1);
+}, 5000);
