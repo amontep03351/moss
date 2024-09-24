@@ -228,9 +228,11 @@ body {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px; /* ขนาดที่ปรับได้ */
     margin: auto;
     overflow: hidden;
+    border-radius: 15px; /* มุมโค้งมน */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* เงา */
 }
 
 .carousel-inner {
@@ -246,11 +248,18 @@ body {
 
 .image-container {
     position: relative;
+    overflow: hidden; /* ซ่อนส่วนที่เกิน */
+    border-radius: 15px; /* มุมโค้งมน */
 }
 
 .image-container img {
     width: 100%;
     height: auto;
+    transition: transform 0.5s ease; /* เพิ่มการเคลื่อนไหว */
+}
+
+.image-container:hover img {
+    transform: scale(1.05); /* ขยายภาพเมื่อ hover */
 }
 
 .overlay {
@@ -263,14 +272,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5); /* พื้นหลังสีดำโปร่งใส */
     color: white;
     opacity: 0;
     transition: opacity 0.5s ease;
+    padding: 20px; /* เพิ่ม padding */
 }
 
 .content-section.active .overlay {
     opacity: 1;
+}
+
+.title {
+    font-size: 24px; /* ขนาดตัวอักษร */
+    margin: 0;
+    text-align: center;
+}
+
+.description {
+    font-size: 16px; /* ขนาดตัวอักษร */
+    text-align: center;
+    margin-top: 10px; /* ระยะห่างด้านบน */
 }
 
 .prev, .next {
@@ -283,6 +305,11 @@ body {
     padding: 10px;
     border-radius: 5px;
     z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 1); /* สีเมื่อ hover */
 }
 
 .prev {
