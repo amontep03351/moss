@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="orderlist.css"> <!-- ใส่ลิงก์ไปยัง CSS ของคุณ -->
+    <title>รายการสั่งซื้อ</title>
+</head>
+<body>
+     
+    <!-- Header Section -->
+    <header class="header">
+        <br>
+        <div class="profile">
+            <img src="logo.png" alt="รูปโปรไฟล์" class="profile-img">
+        </div>
+        <div class="user-info">
+            <div class="user-name">ชื่อผู้ใช้งาน</div>
+            <div class="user-code">รหัส : 000000</div>
+            <div class="user-balance">ยอดเงินสะสม: 0.00 ฿</div>
+        </div>
+        
+        <div class="action-buttons">
+            <div class="btn sell" onclick="sellWaste(event)">
+                <i class="fas fa-trash-alt"></i>
+                <span>ขายขยะ</span>
+            </div>
+            <div class="btn donate" onclick="donateWaste(event)">
+                <i class="fa fa-bullseye"></i>
+                <span>ซื้อขยะ</span>
+            </div>
+           
+        </div>
+        
+    </header>
+    <div class="content">
+        <h3>รายการสั่งซื้อ</h3> 
+        <div class="order_list" id="order-OR0001">
+            <div class="order_header">
+                <h2>รหัสคำสั่งซื้อ: <span class="order_code">#OR0001</span></h2>
+            </div>
+            <div class="order_details">
+                <p><strong>วันที่สั่งซื้อ:</strong> 2024-09-28</p>
+                <p><strong>สถานะ:</strong> เสร็จสิ้น</p>
+            </div>
+            <div class="order_items">
+                <h3>รายการสินค้า:</h3>
+                <ul>
+                    <li>สินค้า A - ฿500</li>
+                    <li>สินค้า B - ฿750</li>
+                    <li>สินค้า C - ฿250</li>
+                </ul>
+            </div>
+            <div class="order_total">
+                <p><strong>ยอดรวม:</strong> <span class="total_price">฿1500</span></p>
+            </div>
+        </div>
+        
+        <div class="order_list" id="order-OR0002">
+            <div class="order_header">
+                <h2>รหัสคำสั่งซื้อ: <span class="order_code">#OR0002</span></h2>
+            </div>
+            <div class="order_details">
+                <p><strong>วันที่สั่งซื้อ:</strong> 2024-09-27</p>
+                <p><strong>สถานะ:</strong> อยู่ระหว่างดำเนินการ</p>
+            </div>
+            <div class="order_items">
+                <h3>รายการสินค้า:</h3>
+                <ul>
+                    <li>สินค้า D - ฿300</li>
+                    <li>สินค้า E - ฿200</li>
+                </ul>
+            </div>
+            <div class="order_total">
+                <p><strong>ยอดรวม:</strong> <span class="total_price">฿500</span></p>
+            </div>
+        </div>
+        <br><br><br><br>
+    </div>
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-btn">
+            <i class="fas fa-home"></i>
+            <span>หน้าหลัก</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-clock"></i>
+            <span>รอรับ</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-history"></i>
+            <span>ประวัติ</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-user"></i>
+            <span>บัญชี</span>
+        </div>
+    </footer>
+</body>
+</html>

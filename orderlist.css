@@ -1,0 +1,62 @@
+body { 
+    background-color: #f4f7fa; /* สีพื้นหลังของหน้า */
+    margin: 0;
+}
+ 
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.order_list {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* ทำให้เกิดเอฟเฟ็กต์เมื่อเอาเมาส์ไปวาง */
+}
+
+.order_list:hover {
+    transform: scale(1.02); /* ขยายขนาดเล็กน้อยเมื่อเอาเมาส์ไปวาง */
+}
+
+.order_header {
+    border-bottom: 2px solid #28a745; /* เส้นใต้สีเขียว */
+    margin-bottom: 10px;
+}
+
+.order_header h2 {
+    margin: 0;
+    color: #28a745; /* สีเขียว */
+}
+
+.order_details p, .order_items h3, .order_total p {
+    margin: 5px 0;
+}
+
+.order_items ul {
+    list-style-type: none; /* ไม่มีจุดในรายการ */
+    padding: 0;
+}
+
+.order_items li {
+    background-color: #e9ecef; /* สีพื้นหลังของรายการสินค้า */
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s; /* เปลี่ยนสีเมื่อเอาเมาส์ไปวาง */
+}
+
+.order_items li:hover {
+    background-color: #d1d1d1; /* สีเมื่อเอาเมาส์ไปวาง */
+}
+
+.total_price {
+    font-weight: bold;
+    color: #dc3545; /* สีแดง */
+    font-size: 1.2em; /* ขนาดตัวอักษรใหญ่ขึ้น */
+}
