@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าสินค้าที่เลือก</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product_card.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <!-- Header Section -->
+    <header class="header"> 
+        <div class="profile">
+            <img src="logo.png" alt="รูปโปรไฟล์" class="profile-img">
+        </div>
+        Moss Shop 
+    </header>
+    <div class="container"> 
+        <h3>สินค้า</h3>
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/150" alt="Product Image 1" class="product-image">
+            <div class="item-info-quantity">
+                <div class="item-info">
+                    <h2>ชื่อสินค้า 1 <i class="fas fa-check-circle" aria-hidden="true"></i></h2>
+                    <p>ราคา: ฿500</p>
+                </div>
+                <div class="quantity">
+                    <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                    <input type="number" value="1" class="quantity-input">
+                    <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <p class="item-total">฿500</p>
+        </div>
+
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/150" alt="Product Image 2" class="product-image">
+            <div class="item-info-quantity">
+                <div class="item-info">
+                    <h2>ชื่อสินค้า 2 <i class="fas fa-check-circle" aria-hidden="true"></i></h2>
+                    <p>ราคา: ฿300</p>
+                </div>
+                <div class="quantity">
+                    <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                    <input type="number" value="1" class="quantity-input">
+                    <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <p class="item-total">฿300</p>
+        </div>
+
+        <div class="cart-item">
+            <img src="https://via.placeholder.com/150" alt="Product Image 3" class="product-image">
+            <div class="item-info-quantity">
+                <div class="item-info">
+                    <h2>ชื่อสินค้า 3 <i class="fas fa-check-circle" aria-hidden="true"></i></h2>
+                    <p>ราคา: ฿400</p>
+                </div>
+                <div class="quantity">
+                    <button class="quantity-btn"><i class="fas fa-minus"></i></button>
+                    <input type="number" value="1" class="quantity-input">
+                    <button class="quantity-btn"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <p class="item-total">฿400</p>
+        </div>
+
+        <div class="total-price">
+            <h2>ยอดรวม: ฿1200</h2>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-btn">
+            <i class="fas fa-home"></i>
+            <span>หน้าหลัก</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-clock"></i>
+            <span>รอรับ</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-history"></i>
+            <span>ประวัติ</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-user"></i>
+            <span>บัญชี</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

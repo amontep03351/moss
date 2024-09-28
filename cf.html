@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cf.css"> <!-- ใช้ CSS ของคุณที่มีอยู่ -->
+    <title>เลือกที่อยู่และยืนยันชำระเงิน</title>
+</head>
+<body>
+    <header class="header"> 
+        <div class="profile">
+            <img src="logo.png" alt="รูปโปรไฟล์" class="profile-img">
+        </div>
+        Moss Shop 
+    </header>
+    <div class="container">
+        <form class="address-form">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">ที่อยู่:</label>
+            <textarea id="address" rows="3" required></textarea>
+
+            <label for="city">เมือง:</label>
+            <input type="text" id="city" required>
+
+            <label for="postal-code">รหัสไปรษณีย์:</label>
+            <input type="text" id="postal-code" required>
+
+            <h2>ยืนยันการชำระเงิน</h2>
+            <div class="total-price">
+                <p>ยอดรวม: <strong>฿2000</strong></p>
+            </div>
+            <button type="submit" class="confirm-button"><i class="fas fa-check-circle"></i> ยืนยันการชำระเงิน</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="footer-btn">
+            <i class="fas fa-home"></i>
+            <span>หน้าหลัก</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-clock"></i>
+            <span>รอรับ</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-history"></i>
+            <span>ประวัติ</span>
+        </div>
+        <div class="footer-btn">
+            <i class="fas fa-user"></i>
+            <span>บัญชี</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

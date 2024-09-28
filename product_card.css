@@ -1,0 +1,109 @@
+body {
+    font-family: "Sarabun", sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+ 
+.container {
+    max-width: 600px;
+    margin: auto;
+    height: 90%; /* กำหนดความสูง */
+    overflow-y: auto; /* แสดงสกอร์บาร์แนวตั้งเมื่อมีเนื้อหาเกิน */
+    border: 1px solid #ddd; /* เพิ่มเส้นขอบ */
+    border-radius: 5px; /* ทำมุมให้โค้ง */
+    background-color: #f8f9fa; /* พื้นหลัง */
+    padding: 10px; /* เพิ่ม padding */
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50; /* สีเขียว */
+}
+ 
+.container h3 {
+    margin-bottom: 20px;
+    color: #00796b;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 0px;
+}
+
+.item-info-quantity {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: 40%;
+    padding-left: 0px;
+}
+
+.item-info {
+    padding-left: 0px;
+}
+
+.item-info h2 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-top: 0;
+    color: #333; /* สีดำ */
+}
+
+.item-info p {
+    font-size: 0.9rem;
+    color: #888; /* สีเทา */
+    margin: 0;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.quantity-btn {
+    background-color: #4CAF50; /* สีเขียว */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 1rem;
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.item-total {  
+    font-size: 1rem;
+    color: #333; /* สีดำ */
+    font-weight: 300;
+    text-align: right;
+    margin-top: 0;
+}
+
+.total-price {
+    margin-top: 20px;
+    text-align: right;
+    color: #4CAF50; /* สีเขียว */
+}
